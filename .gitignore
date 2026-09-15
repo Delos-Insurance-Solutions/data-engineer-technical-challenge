@@ -1,0 +1,26 @@
+# IDE specific
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+
+# temp directory
+.temp
+.tmp
+
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# generated code (Prisma client output)
+**/src/generated/
+
+# local environment
+.env
+
+# build info
+tsconfig.tsbuildinfo
+*.tsbuildinfo

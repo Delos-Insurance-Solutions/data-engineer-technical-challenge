@@ -1,0 +1,21 @@
+// The schema is yours to design. This model exists only so the scaffold has a
+// table to prove the database connection works; delete it once you have your own.
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+  runtime      = "nodejs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model ScaffoldCheck {
+  id        Int      @id @default(autoincrement())
+  note      String
+  createdAt DateTime @default(now())
+
+  @@map("scaffold_check")
+}

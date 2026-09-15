@@ -1,0 +1,10 @@
+# pnpm 11 blocks package install scripts unless they are listed here.
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true
+minimumReleaseAgeExclude:
+  - '@nestjs/core@11.2.4'
+  - '@nestjs/platform-express@11.2.4'
+  - '@nestjs/testing@11.2.4'

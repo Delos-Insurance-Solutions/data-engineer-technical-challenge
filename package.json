@@ -1,0 +1,46 @@
+{
+  "name": "agent-feed-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": "^24.18.0"
+  },
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "ingest": "tsx src/cli/ingest.ts",
+    "report": "tsx src/cli/report.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:studio": "prisma studio",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.2.3",
+    "@nestjs/core": "11.2.3",
+    "@nestjs/platform-express": "11.2.3",
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "dotenv": "17.2.3",
+    "pg": "8.23.0",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "11.0.24",
+    "@nestjs/schematics": "11.0.9",
+    "@nestjs/testing": "11.2.3",
+    "@types/node": "24.13.4",
+    "@types/pg": "8.15.6",
+    "prisma": "7.10.0",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11"
+  }
+}
